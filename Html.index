@@ -1,0 +1,403 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>Virexon Intense Gel</title>
+<style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+body{
+    font-family:Arial, Helvetica, sans-serif;
+    background:#f5f7fa;
+    color:#111;
+    line-height:1.5;
+}
+.container{
+    width:100%;
+    max-width:1100px;
+    margin:auto;
+    padding:20px;
+}
+header{
+    background:linear-gradient(135deg,#0b1220,#1d3557);
+    color:#fff;
+    padding:50px 20px;
+}
+.hero{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:40px;
+    align-items:center;
+}
+.hero h1{
+    font-size:42px;
+    line-height:1.15;
+    margin-bottom:20px;
+}
+.hero p{
+    font-size:20px;
+    opacity:.95;
+    margin-bottom:25px;
+}
+.btn{
+    display:inline-block;
+    background:#1db954;
+    color:#fff;
+    text-decoration:none;
+    padding:16px 28px;
+    border-radius:8px;
+    font-weight:bold;
+    font-size:18px;
+}
+.btn:hover{
+    opacity:.9;
+}
+.product-box{
+    background:#fff;
+    border-radius:18px;
+    padding:30px;
+    text-align:center;
+    color:#111;
+    box-shadow:0 10px 30px rgba(0,0,0,.15);
+}
+.product{
+    width:220px;
+    height:320px;
+    margin:auto;
+    border-radius:14px;
+    background:linear-gradient(180deg,#1d3557,#0b1220);
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    color:#fff;
+    font-size:28px;
+    font-weight:bold;
+    text-align:center;
+    padding:20px;
+}
+.badges{
+    display:flex;
+    gap:15px;
+    flex-wrap:wrap;
+    margin-top:20px;
+}
+.badge{
+    background:#ffffff15;
+    padding:10px 14px;
+    border-radius:30px;
+    font-size:14px;
+}
+section{
+    padding:55px 0;
+}
+h2{
+    font-size:34px;
+    margin-bottom:20px;
+    text-align:center;
+}
+.subtitle{
+    text-align:center;
+    max-width:800px;
+    margin:0 auto 30px;
+    color:#555;
+}
+.grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+    gap:20px;
+}
+.card{
+    background:#fff;
+    padding:25px;
+    border-radius:14px;
+    box-shadow:0 8px 20px rgba(0,0,0,.06);
+}
+.card h3{
+    font-size:18px;
+    margin-bottom:10px;
+}
+.gray{
+    background:#eef2f6;
+}
+.testimonial{
+    font-style:italic;
+}
+.offer-wrap{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:25px;
+}
+.offer{
+    background:#fff;
+    padding:30px;
+    border-radius:16px;
+    box-shadow:0 10px 25px rgba(0,0,0,.08);
+    text-align:center;
+}
+.offer h3{
+    font-size:26px;
+    margin-bottom:10px;
+}
+.price{
+    font-size:38px;
+    color:#1d3557;
+    font-weight:bold;
+    margin:15px 0;
+}
+.tag{
+    display:inline-block;
+    background:#1db954;
+    color:#fff;
+    padding:6px 12px;
+    border-radius:30px;
+    font-size:13px;
+    margin-bottom:15px;
+}
+.faq{
+    max-width:850px;
+    margin:auto;
+}
+.faq-item{
+    background:#fff;
+    padding:20px;
+    border-radius:12px;
+    margin-bottom:15px;
+}
+footer{
+    background:#0b1220;
+    color:#fff;
+    text-align:center;
+    padding:40px 20px;
+    margin-top:40px;
+}
+small{
+    opacity:.8;
+}
+@media(max-width:900px){
+.hero{
+grid-template-columns:1fr;
+}
+.hero h1{
+font-size:34px;
+}
+.offer-wrap{
+grid-template-columns:1fr;
+}
+}
+</style>
+</head>
+<body>
+
+<header>
+<div class="container hero">
+
+<div>
+<h1>Recupere confiança e intensidade nos momentos íntimos — com discrição total.</h1>
+
+<p>Homens acima dos 35 estão conhecendo uma nova geração de gel íntimo premium de aplicação simples e uso discreto.</p>
+
+<a href="#oferta" class="btn">QUERO EXPERIMENTAR AGORA</a>
+
+<div class="badges">
+<div class="badge">✓ Embalagem discreta</div>
+<div class="badge">✓ Compra segura</div>
+<div class="badge">✓ Entrega rápida</div>
+<div class="badge">✓ Pagamento protegido</div>
+</div>
+</div>
+
+<div class="product-box">
+<div class="product">
+VIREXON<br>INTENSE GEL
+</div>
+<p style="margin-top:18px;font-size:15px;color:#555;">
+Performance Masculina Premium
+</p>
+</div>
+
+</div>
+</header>
+
+<section>
+<div class="container">
+
+<h2>Quando a confiança masculina muda, tudo muda.</h2>
+<p class="subtitle">
+Muitos homens percebem pequenas mudanças com o tempo:
+menos segurança, mais ansiedade no momento íntimo e receio de falhar.
+Virexon Intense foi pensado para quem busca praticidade, discrição e confiança.
+</p>
+
+<div class="grid">
+<div class="card">
+<h3>Mais Segurança</h3>
+<p>Volte a viver os momentos íntimos com tranquilidade.</p>
+</div>
+
+<div class="card">
+<h3>Aplicação Simples</h3>
+<p>Uso rápido e prático antes dos momentos importantes.</p>
+</div>
+
+<div class="card">
+<h3>Uso Discreto</h3>
+<p>Sem chamar atenção. Sem constrangimento.</p>
+</div>
+
+<div class="card">
+<h3>Confiança Renovada</h3>
+<p>Sentir-se preparado muda tudo.</p>
+</div>
+</div>
+
+</div>
+</section>
+
+<section class="gray">
+<div class="container">
+
+<h2>Tecnologia cosmética masculina de nova geração</h2>
+
+<p class="subtitle">
+Sua fórmula em gel foi desenvolvida para absorção tópica rápida,
+proporcionando praticidade e sensação de preparo antes dos momentos íntimos.
+</p>
+
+<div class="grid">
+<div class="card">
+<h3>Textura Premium</h3>
+<p>Aplicação confortável e discreta.</p>
+</div>
+
+<div class="card">
+<h3>Rotina Moderna</h3>
+<p>Sem depender de comprimidos.</p>
+</div>
+
+<div class="card">
+<h3>Visual Elegante</h3>
+<p>Produto pensado para homens exigentes.</p>
+</div>
+</div>
+
+</div>
+</section>
+
+<section>
+<div class="container">
+
+<h2>Ninguém precisa saber.</h2>
+
+<p class="subtitle">
+A embalagem foi criada no formato de gel íntimo premium,
+discreta e sofisticada. Pode ficar no banheiro, nécessaire ou gaveta
+sem levantar questionamentos.
+</p>
+
+</div>
+</section>
+
+<section class="gray">
+<div class="container">
+
+<h2>Homens reais relatam mais confiança</h2>
+
+<div class="grid">
+
+<div class="card testimonial">
+“Gostei da discrição. Passei a me sentir mais seguro e tranquilo.”
+<br><br><strong>Marcelo, 42 anos</strong>
+</div>
+
+<div class="card testimonial">
+“Produto elegante, fácil de usar e me ajudou psicologicamente.”
+<br><br><strong>Eduardo, 51 anos</strong>
+</div>
+
+<div class="card testimonial">
+“Minha maior mudança foi voltar a confiar.”
+<br><br><strong>Rafael, 38 anos</strong>
+</div>
+
+</div>
+
+</div>
+</section>
+
+<section id="oferta">
+<div class="container">
+
+<h2>Escolha seu Kit</h2>
+
+<div class="offer-wrap">
+
+<div class="offer">
+<h3>1 Unidade</h3>
+<p>Ideal para experimentar</p>
+<div class="price">R$ 49,90</div>
+<a href="#" class="btn">COMPRAR AGORA</a>
+</div>
+
+<div class="offer">
+<div class="tag">MAIS VENDIDO</div>
+<h3>3 Unidades</h3>
+<p>Melhor custo-benefício</p>
+<div class="price">R$ 89,90</div>
+<a href="#" class="btn">QUERO O KIT COMPLETO</a>
+</div>
+
+</div>
+
+</div>
+</section>
+
+<section class="gray">
+<div class="container">
+
+<h2>Perguntas Frequentes</h2>
+
+<div class="faq">
+
+<div class="faq-item">
+<strong>Isso é comprimido?</strong><br>
+Não. Produto em gel de uso tópico.
+</div>
+
+<div class="faq-item">
+<strong>A embalagem é discreta?</strong><br>
+Sim. Sem descrição constrangedora.
+</div>
+
+<div class="faq-item">
+<strong>Como usar?</strong><br>
+Aplicação simples conforme instruções da embalagem.
+</div>
+
+<div class="faq-item">
+<strong>Em quanto tempo recebo?</strong><br>
+Prazo informado no checkout conforme sua região.
+</div>
+
+</div>
+
+</div>
+</section>
+
+<footer>
+<h2 style="color:#fff;">Sua confiança merece atenção.</h2>
+<p style="margin:15px 0 25px;">
+Receba com discrição total.
+</p>
+<a href="#oferta" class="btn">QUERO RECEBER AGORA</a>
+<br><br>
+<small>
+Produto cosmético. Resultados podem variar de pessoa para pessoa.
+</small>
+</footer>
+
+</body>
+</html>

@@ -1,403 +1,908 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-<meta charset="UTF-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-<title>Virexon Intense Gel</title>
-<style>
-*{
-    margin:0;
-    padding:0;
-    box-sizing:border-box;
-}
-body{
-    font-family:Arial, Helvetica, sans-serif;
-    background:#f5f7fa;
-    color:#111;
-    line-height:1.5;
-}
-.container{
-    width:100%;
-    max-width:1100px;
-    margin:auto;
-    padding:20px;
-}
-header{
-    background:linear-gradient(135deg,#0b1220,#1d3557);
-    color:#fff;
-    padding:50px 20px;
-}
-.hero{
-    display:grid;
-    grid-template-columns:1fr 1fr;
-    gap:40px;
-    align-items:center;
-}
-.hero h1{
-    font-size:42px;
-    line-height:1.15;
-    margin-bottom:20px;
-}
-.hero p{
-    font-size:20px;
-    opacity:.95;
-    margin-bottom:25px;
-}
-.btn{
-    display:inline-block;
-    background:#1db954;
-    color:#fff;
-    text-decoration:none;
-    padding:16px 28px;
-    border-radius:8px;
-    font-weight:bold;
-    font-size:18px;
-}
-.btn:hover{
-    opacity:.9;
-}
-.product-box{
-    background:#fff;
-    border-radius:18px;
-    padding:30px;
-    text-align:center;
-    color:#111;
-    box-shadow:0 10px 30px rgba(0,0,0,.15);
-}
-.product{
-    width:220px;
-    height:320px;
-    margin:auto;
-    border-radius:14px;
-    background:linear-gradient(180deg,#1d3557,#0b1220);
-    display:flex;
-    align-items:center;
-    justify-content:center;
-    color:#fff;
-    font-size:28px;
-    font-weight:bold;
-    text-align:center;
-    padding:20px;
-}
-.badges{
-    display:flex;
-    gap:15px;
-    flex-wrap:wrap;
-    margin-top:20px;
-}
-.badge{
-    background:#ffffff15;
-    padding:10px 14px;
-    border-radius:30px;
-    font-size:14px;
-}
-section{
-    padding:55px 0;
-}
-h2{
-    font-size:34px;
-    margin-bottom:20px;
-    text-align:center;
-}
-.subtitle{
-    text-align:center;
-    max-width:800px;
-    margin:0 auto 30px;
-    color:#555;
-}
-.grid{
-    display:grid;
-    grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
-    gap:20px;
-}
-.card{
-    background:#fff;
-    padding:25px;
-    border-radius:14px;
-    box-shadow:0 8px 20px rgba(0,0,0,.06);
-}
-.card h3{
-    font-size:18px;
-    margin-bottom:10px;
-}
-.gray{
-    background:#eef2f6;
-}
-.testimonial{
-    font-style:italic;
-}
-.offer-wrap{
-    display:grid;
-    grid-template-columns:1fr 1fr;
-    gap:25px;
-}
-.offer{
-    background:#fff;
-    padding:30px;
-    border-radius:16px;
-    box-shadow:0 10px 25px rgba(0,0,0,.08);
-    text-align:center;
-}
-.offer h3{
-    font-size:26px;
-    margin-bottom:10px;
-}
-.price{
-    font-size:38px;
-    color:#1d3557;
-    font-weight:bold;
-    margin:15px 0;
-}
-.tag{
-    display:inline-block;
-    background:#1db954;
-    color:#fff;
-    padding:6px 12px;
-    border-radius:30px;
-    font-size:13px;
-    margin-bottom:15px;
-}
-.faq{
-    max-width:850px;
-    margin:auto;
-}
-.faq-item{
-    background:#fff;
-    padding:20px;
-    border-radius:12px;
-    margin-bottom:15px;
-}
-footer{
-    background:#0b1220;
-    color:#fff;
-    text-align:center;
-    padding:40px 20px;
-    margin-top:40px;
-}
-small{
-    opacity:.8;
-}
-@media(max-width:900px){
-.hero{
-grid-template-columns:1fr;
-}
-.hero h1{
-font-size:34px;
-}
-.offer-wrap{
-grid-template-columns:1fr;
-}
-}
-</style>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>Virexon Intense Gel</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
+            background: #f5f7fa;
+            color: #111;
+            line-height: 1.5;
+            overflow-x: hidden;
+        }
+
+        /* ============ PARTICLES BACKGROUND (hero) ============ */
+        .particles-container {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            pointer-events: none;
+            overflow: hidden;
+            z-index: 0;
+        }
+
+        .particle {
+            position: absolute;
+            background: rgba(255, 255, 255, 0.15);
+            border-radius: 50%;
+            animation: floatUp linear infinite;
+            bottom: -50px;
+        }
+
+        @keyframes floatUp {
+            0% {
+                transform: translateY(0) scale(0);
+                opacity: 0;
+            }
+            10% {
+                opacity: 1;
+            }
+            90% {
+                opacity: 0.5;
+            }
+            100% {
+                transform: translateY(-110vh) scale(1);
+                opacity: 0;
+            }
+        }
+
+        /* ============ CONTAINER & UTILS ============ */
+        .container {
+            width: 100%;
+            max-width: 1100px;
+            margin: auto;
+            padding: 20px;
+            position: relative;
+            z-index: 2;
+        }
+
+        /* ============ HEADER & PARALLAX ============ */
+        header {
+            background: linear-gradient(135deg, #0b1220, #1d3557);
+            color: #fff;
+            padding: 80px 20px;
+            position: relative;
+            overflow: hidden;
+            transform-style: preserve-3d;
+            perspective: 1000px;
+        }
+
+        header::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            left: -50%;
+            width: 200%;
+            height: 200%;
+            background: radial-gradient(circle at 30% 40%, rgba(29,185,84,0.08) 0%, transparent 50%),
+                radial-gradient(circle at 70% 60%, rgba(255,255,255,0.05) 0%, transparent 50%);
+            animation: headerGlow 8s ease-in-out infinite alternate;
+            z-index: 0;
+        }
+
+        @keyframes headerGlow {
+            0% {
+                transform: translate(0, 0) scale(1);
+            }
+            100% {
+                transform: translate(2%, 2%) scale(1.05);
+            }
+        }
+
+        .hero {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 40px;
+            align-items: center;
+            position: relative;
+            z-index: 2;
+            transform: translateZ(0);
+            will-change: transform;
+        }
+
+        .hero h1 {
+            font-size: 42px;
+            line-height: 1.15;
+            margin-bottom: 20px;
+            text-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+            animation: fadeInUp 1s ease-out;
+        }
+
+        .hero p {
+            font-size: 20px;
+            opacity: 0.95;
+            margin-bottom: 25px;
+            animation: fadeInUp 1s ease-out 0.2s both;
+        }
+
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        /* ============ BUTTONS & RIPPLE ============ */
+        .btn {
+            display: inline-block;
+            background: linear-gradient(135deg, #1db954, #17a34a);
+            color: #fff;
+            text-decoration: none;
+            padding: 18px 32px;
+            border-radius: 50px;
+            font-weight: bold;
+            font-size: 18px;
+            position: relative;
+            overflow: hidden;
+            transition: all 0.4s cubic-bezier(0.25, 0.8, 0.25, 1.2);
+            box-shadow: 0 8px 25px rgba(29, 185, 84, 0.35);
+            z-index: 1;
+            animation: fadeInUp 1s ease-out 0.4s both;
+            letter-spacing: 0.5px;
+        }
+
+        .btn:hover {
+            transform: translateY(-3px) scale(1.03);
+            box-shadow: 0 15px 35px rgba(29, 185, 84, 0.5);
+            background: linear-gradient(135deg, #1fd965, #1db954);
+        }
+
+        .btn:active {
+            transform: translateY(0) scale(0.98);
+        }
+
+        .ripple {
+            position: absolute;
+            border-radius: 50%;
+            background: rgba(255, 255, 255, 0.5);
+            transform: scale(0);
+            animation: rippleEffect 0.6s linear;
+            pointer-events: none;
+        }
+
+        @keyframes rippleEffect {
+            to {
+                transform: scale(4);
+                opacity: 0;
+            }
+        }
+
+        /* ============ PRODUCT BOX (glassmorphism) ============ */
+        .product-box {
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(20px);
+            -webkit-backdrop-filter: blur(20px);
+            border-radius: 24px;
+            padding: 40px 30px;
+            text-align: center;
+            color: #fff;
+            border: 1px solid rgba(255, 255, 255, 0.18);
+            box-shadow: 0 20px 50px rgba(0, 0, 0, 0.3), inset 0 0 30px rgba(255, 255, 255, 0.05);
+            transform-style: preserve-3d;
+            perspective: 800px;
+            animation: fadeInUp 1s ease-out 0.3s both;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .product-box:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 30px 60px rgba(0, 0, 0, 0.4), inset 0 0 40px rgba(255, 255, 255, 0.08);
+        }
+
+        .product {
+            width: 220px;
+            height: 320px;
+            margin: auto;
+            border-radius: 18px;
+            background: linear-gradient(180deg, #1d3557, #0b1220);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #fff;
+            font-size: 28px;
+            font-weight: bold;
+            text-align: center;
+            padding: 20px;
+            box-shadow: 0 15px 40px rgba(0, 0, 0, 0.5), inset 0 2px 10px rgba(255, 255, 255, 0.2);
+            transition: transform 0.5s cubic-bezier(0.25, 0.8, 0.25, 1.2);
+            transform: rotateY(0deg) rotateX(0deg);
+            will-change: transform;
+        }
+
+        .product-box:hover .product {
+            transform: rotateY(-5deg) rotateX(3deg) scale(1.04);
+        }
+
+        .badges {
+            display: flex;
+            gap: 15px;
+            flex-wrap: wrap;
+            margin-top: 25px;
+            animation: fadeInUp 1s ease-out 0.5s both;
+        }
+
+        .badge {
+            background: rgba(255, 255, 255, 0.12);
+            backdrop-filter: blur(8px);
+            padding: 10px 18px;
+            border-radius: 30px;
+            font-size: 14px;
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            transition: all 0.3s ease;
+        }
+
+        .badge:hover {
+            background: rgba(255, 255, 255, 0.22);
+            transform: translateY(-2px);
+        }
+
+        /* ============ SECTIONS ============ */
+        section {
+            padding: 70px 0;
+        }
+
+        h2 {
+            font-size: 38px;
+            margin-bottom: 20px;
+            text-align: center;
+            background: linear-gradient(135deg, #1d3557, #0b1220);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .subtitle {
+            text-align: center;
+            max-width: 800px;
+            margin: 0 auto 40px;
+            color: #555;
+            font-size: 18px;
+        }
+
+        /* ============ CARDS (glass + 3D tilt) ============ */
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: 25px;
+        }
+
+        .card {
+            background: rgba(255, 255, 255, 0.8);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+            padding: 30px 25px;
+            border-radius: 20px;
+            border: 1px solid rgba(255, 255, 255, 0.6);
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+            transition: all 0.4s cubic-bezier(0.25, 0.8, 0.25, 1.2);
+            transform-style: preserve-3d;
+            perspective: 600px;
+            cursor: default;
+        }
+
+        .card:hover {
+            transform: translateY(-10px) rotateX(3deg) rotateY(-2deg);
+            box-shadow: 0 25px 50px rgba(0, 0, 0, 0.12);
+            border-color: rgba(29, 185, 84, 0.3);
+        }
+
+        .card h3 {
+            font-size: 20px;
+            margin-bottom: 12px;
+            position: relative;
+            display: inline-block;
+        }
+
+        .card h3::after {
+            content: '';
+            position: absolute;
+            bottom: -4px;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background: #1db954;
+            transition: width 0.3s ease;
+        }
+
+        .card:hover h3::after {
+            width: 100%;
+        }
+
+        .gray {
+            background: #eef2f6;
+            position: relative;
+        }
+
+        .gray::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: radial-gradient(circle at 20% 80%, rgba(29, 185, 84, 0.04) 0%, transparent 60%);
+            pointer-events: none;
+        }
+
+        /* ============ HORIZONTAL SCROLL SECTION (Testemunhos) ============ */
+        .horizontal-scroll-section {
+            padding: 60px 0;
+            background: #fff;
+            overflow: hidden;
+        }
+
+        .horizontal-scroll-wrapper {
+            display: flex;
+            overflow-x: auto;
+            scroll-snap-type: x mandatory;
+            -webkit-overflow-scrolling: touch;
+            gap: 30px;
+            padding: 20px 40px 40px;
+            cursor: grab;
+            scroll-behavior: smooth;
+        }
+
+        .horizontal-scroll-wrapper::-webkit-scrollbar {
+            height: 8px;
+        }
+
+        .horizontal-scroll-wrapper::-webkit-scrollbar-track {
+            background: #f0f0f0;
+            border-radius: 10px;
+        }
+
+        .horizontal-scroll-wrapper::-webkit-scrollbar-thumb {
+            background: #1db954;
+            border-radius: 10px;
+        }
+
+        .horizontal-scroll-wrapper:active {
+            cursor: grabbing;
+        }
+
+        .scroll-card {
+            flex: 0 0 320px;
+            scroll-snap-align: start;
+            background: linear-gradient(145deg, #ffffff, #f0f4f8);
+            border-radius: 24px;
+            padding: 30px;
+            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.08);
+            transition: all 0.4s ease;
+            border: 1px solid rgba(0, 0, 0, 0.04);
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            font-style: italic;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .scroll-card::before {
+            content: '"';
+            position: absolute;
+            top: -20px;
+            left: 20px;
+            font-size: 120px;
+            color: rgba(29, 185, 84, 0.08);
+            font-family: Georgia, serif;
+            line-height: 1;
+            pointer-events: none;
+        }
+
+        .scroll-card:hover {
+            transform: scale(1.03);
+            box-shadow: 0 25px 50px rgba(0, 0, 0, 0.15);
+        }
+
+        .scroll-card strong {
+            margin-top: 20px;
+            font-style: normal;
+            color: #1d3557;
+            display: block;
+        }
+
+        /* ============ OFFER CARDS (com hover glow) ============ */
+        .offer-wrap {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 30px;
+        }
+
+        .offer {
+            background: #fff;
+            padding: 40px 30px;
+            border-radius: 24px;
+            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.06);
+            text-align: center;
+            transition: all 0.4s ease;
+            position: relative;
+            overflow: hidden;
+            border: 2px solid transparent;
+        }
+
+        .offer:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 30px 60px rgba(29, 185, 84, 0.15);
+            border-color: rgba(29, 185, 84, 0.4);
+        }
+
+        .offer::after {
+            content: '';
+            position: absolute;
+            top: -50%;
+            left: -50%;
+            width: 200%;
+            height: 200%;
+            background: radial-gradient(circle, rgba(29,185,84,0.06) 0%, transparent 70%);
+            opacity: 0;
+            transition: opacity 0.4s ease;
+            pointer-events: none;
+        }
+
+        .offer:hover::after {
+            opacity: 1;
+        }
+
+        .offer h3 {
+            font-size: 28px;
+            margin-bottom: 10px;
+        }
+
+        .price {
+            font-size: 42px;
+            color: #1d3557;
+            font-weight: bold;
+            margin: 20px 0;
+            transition: transform 0.3s ease;
+        }
+
+        .offer:hover .price {
+            transform: scale(1.08);
+            color: #1db954;
+        }
+
+        .tag {
+            display: inline-block;
+            background: linear-gradient(135deg, #1db954, #17a34a);
+            color: #fff;
+            padding: 8px 18px;
+            border-radius: 30px;
+            font-size: 14px;
+            margin-bottom: 15px;
+            font-weight: bold;
+            letter-spacing: 0.5px;
+            box-shadow: 0 5px 15px rgba(29, 185, 84, 0.3);
+        }
+
+        /* ============ FAQ ============ */
+        .faq {
+            max-width: 850px;
+            margin: auto;
+        }
+
+        .faq-item {
+            background: #fff;
+            padding: 25px;
+            border-radius: 16px;
+            margin-bottom: 15px;
+            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.04);
+            transition: all 0.3s ease;
+            border-left: 4px solid transparent;
+            cursor: pointer;
+        }
+
+        .faq-item:hover {
+            border-left-color: #1db954;
+            transform: translateX(8px);
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+        }
+
+        /* ============ FOOTER ============ */
+        footer {
+            background: #0b1220;
+            color: #fff;
+            text-align: center;
+            padding: 60px 20px;
+            margin-top: 40px;
+            position: relative;
+            overflow: hidden;
+        }
+
+        footer::before {
+            content: '';
+            position: absolute;
+            top: -30px;
+            left: 0;
+            width: 100%;
+            height: 60px;
+            background: url("data:image/svg+xml,%3Csvg viewBox='0 0 1200 120' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M0,60 C300,120 900,0 1200,60 L1200,120 L0,120 Z' fill='%23f5f7fa'/%3E%3C/svg%3E") no-repeat;
+            background-size: cover;
+        }
+
+        small {
+            opacity: 0.8;
+            display: block;
+            margin-top: 30px;
+        }
+
+        /* ============ SCROLL ANIMATIONS (reveal) ============ */
+        .reveal {
+            opacity: 0;
+            transform: translateY(40px);
+            transition: all 0.8s cubic-bezier(0.25, 0.8, 0.25, 1);
+        }
+
+        .reveal.active {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        .reveal-left {
+            opacity: 0;
+            transform: translateX(-40px);
+            transition: all 0.8s cubic-bezier(0.25, 0.8, 0.25, 1);
+        }
+
+        .reveal-left.active {
+            opacity: 1;
+            transform: translateX(0);
+        }
+
+        .reveal-right {
+            opacity: 0;
+            transform: translateX(40px);
+            transition: all 0.8s cubic-bezier(0.25, 0.8, 0.25, 1);
+        }
+
+        .reveal-right.active {
+            opacity: 1;
+            transform: translateX(0);
+        }
+
+        /* ============ RESPONSIVE ============ */
+        @media(max-width:900px) {
+            .hero {
+                grid-template-columns: 1fr;
+            }
+            .hero h1 {
+                font-size: 34px;
+            }
+            .offer-wrap {
+                grid-template-columns: 1fr;
+            }
+            .horizontal-scroll-wrapper {
+                padding: 20px 20px 40px;
+            }
+            .scroll-card {
+                flex: 0 0 280px;
+            }
+            .product-box {
+                padding: 30px 20px;
+            }
+            header {
+                padding: 50px 15px;
+            }
+            h2 {
+                font-size: 30px;
+            }
+        }
+    </style>
 </head>
 <body>
 
-<header>
-<div class="container hero">
+    <header id="header">
+        <!-- Partículas -->
+        <div class="particles-container" id="particles"></div>
 
-<div>
-<h1>Recupere confiança e intensidade nos momentos íntimos — com discrição total.</h1>
+        <div class="container hero">
+            <div class="reveal-left">
+                <h1>Recupere confiança e intensidade nos momentos íntimos — com discrição total.</h1>
+                <p>Homens acima dos 35 estão conhecendo uma nova geração de gel íntimo premium de aplicação simples e uso discreto.</p>
+                <a href="#oferta" class="btn">QUERO EXPERIMENTAR AGORA</a>
+                <div class="badges">
+                    <div class="badge">✓ Embalagem discreta</div>
+                    <div class="badge">✓ Compra segura</div>
+                    <div class="badge">✓ Entrega rápida</div>
+                    <div class="badge">✓ Pagamento protegido</div>
+                </div>
+            </div>
 
-<p>Homens acima dos 35 estão conhecendo uma nova geração de gel íntimo premium de aplicação simples e uso discreto.</p>
+            <div class="product-box reveal-right">
+                <div class="product" id="product3d">
+                    VIREXON<br>INTENSE GEL
+                </div>
+                <p style="margin-top:18px;font-size:15px;color:rgba(255,255,255,0.9);">
+                    Performance Masculina Premium
+                </p>
+            </div>
+        </div>
+    </header>
 
-<a href="#oferta" class="btn">QUERO EXPERIMENTAR AGORA</a>
+    <section>
+        <div class="container">
+            <h2 class="reveal">Quando a confiança masculina muda, tudo muda.</h2>
+            <p class="subtitle reveal">
+                Muitos homens percebem pequenas mudanças com o tempo:
+                menos segurança, mais ansiedade no momento íntimo e receio de falhar.
+                Virexon Intense foi pensado para quem busca praticidade, discrição e confiança.
+            </p>
+            <div class="grid">
+                <div class="card reveal">
+                    <h3>Mais Segurança</h3>
+                    <p>Volte a viver os momentos íntimos com tranquilidade.</p>
+                </div>
+                <div class="card reveal">
+                    <h3>Aplicação Simples</h3>
+                    <p>Uso rápido e prático antes dos momentos importantes.</p>
+                </div>
+                <div class="card reveal">
+                    <h3>Uso Discreto</h3>
+                    <p>Sem chamar atenção. Sem constrangimento.</p>
+                </div>
+                <div class="card reveal">
+                    <h3>Confiança Renovada</h3>
+                    <p>Sentir-se preparado muda tudo.</p>
+                </div>
+            </div>
+        </div>
+    </section>
 
-<div class="badges">
-<div class="badge">✓ Embalagem discreta</div>
-<div class="badge">✓ Compra segura</div>
-<div class="badge">✓ Entrega rápida</div>
-<div class="badge">✓ Pagamento protegido</div>
-</div>
-</div>
+    <section class="gray">
+        <div class="container">
+            <h2 class="reveal">Tecnologia cosmética masculina de nova geração</h2>
+            <p class="subtitle reveal">
+                Sua fórmula em gel foi desenvolvida para absorção tópica rápida,
+                proporcionando praticidade e sensação de preparo antes dos momentos íntimos.
+            </p>
+            <div class="grid">
+                <div class="card reveal">
+                    <h3>Textura Premium</h3>
+                    <p>Aplicação confortável e discreta.</p>
+                </div>
+                <div class="card reveal">
+                    <h3>Rotina Moderna</h3>
+                    <p>Sem depender de comprimidos.</p>
+                </div>
+                <div class="card reveal">
+                    <h3>Visual Elegante</h3>
+                    <p>Produto pensado para homens exigentes.</p>
+                </div>
+            </div>
+        </div>
+    </section>
 
-<div class="product-box">
-<div class="product">
-VIREXON<br>INTENSE GEL
-</div>
-<p style="margin-top:18px;font-size:15px;color:#555;">
-Performance Masculina Premium
-</p>
-</div>
+    <section>
+        <div class="container">
+            <h2 class="reveal">Ninguém precisa saber.</h2>
+            <p class="subtitle reveal">
+                A embalagem foi criada no formato de gel íntimo premium,
+                discreta e sofisticada. Pode ficar no banheiro, nécessaire ou gaveta
+                sem levantar questionamentos.
+            </p>
+        </div>
+    </section>
 
-</div>
-</header>
+    <!-- SEÇÃO COM ROLAGEM LATERAL (HORIZONTAL SCROLL) -->
+    <section class="horizontal-scroll-section">
+        <div class="container">
+            <h2 class="reveal">Homens reais relatam mais confiança</h2>
+            <p class="subtitle reveal">Arraste para o lado e veja os depoimentos ↓</p>
+        </div>
+        <div class="horizontal-scroll-wrapper" id="horizontalScroll">
+            <div class="scroll-card">
+                “Gostei da discrição. Passei a me sentir mais seguro e tranquilo.”
+                <strong>Marcelo, 42 anos</strong>
+            </div>
+            <div class="scroll-card">
+                “Produto elegante, fácil de usar e me ajudou psicologicamente.”
+                <strong>Eduardo, 51 anos</strong>
+            </div>
+            <div class="scroll-card">
+                “Minha maior mudança foi voltar a confiar.”
+                <strong>Rafael, 38 anos</strong>
+            </div>
+            <div class="scroll-card">
+                “Chegou rápido e a embalagem é super discreta. Recomendo.”
+                <strong>André, 45 anos</strong>
+            </div>
+            <div class="scroll-card">
+                “Uso há 2 meses e a confiança só aumenta.”
+                <strong>Felipe, 39 anos</strong>
+            </div>
+        </div>
+    </section>
 
-<section>
-<div class="container">
+    <section id="oferta">
+        <div class="container">
+            <h2 class="reveal">Escolha seu Kit</h2>
+            <div class="offer-wrap">
+                <div class="offer reveal">
+                    <h3>1 Unidade</h3>
+                    <p>Ideal para experimentar</p>
+                    <div class="price">R$ 49,90</div>
+                    <a href="#" class="btn">COMPRAR AGORA</a>
+                </div>
+                <div class="offer reveal">
+                    <div class="tag">MAIS VENDIDO</div>
+                    <h3>3 Unidades</h3>
+                    <p>Melhor custo-benefício</p>
+                    <div class="price">R$ 89,90</div>
+                    <a href="#" class="btn">QUERO O KIT COMPLETO</a>
+                </div>
+            </div>
+        </div>
+    </section>
 
-<h2>Quando a confiança masculina muda, tudo muda.</h2>
-<p class="subtitle">
-Muitos homens percebem pequenas mudanças com o tempo:
-menos segurança, mais ansiedade no momento íntimo e receio de falhar.
-Virexon Intense foi pensado para quem busca praticidade, discrição e confiança.
-</p>
+    <section class="gray">
+        <div class="container">
+            <h2 class="reveal">Perguntas Frequentes</h2>
+            <div class="faq">
+                <div class="faq-item reveal">
+                    <strong>Isso é comprimido?</strong><br>
+                    Não. Produto em gel de uso tópico.
+                </div>
+                <div class="faq-item reveal">
+                    <strong>A embalagem é discreta?</strong><br>
+                    Sim. Sem descrição constrangedora.
+                </div>
+                <div class="faq-item reveal">
+                    <strong>Como usar?</strong><br>
+                    Aplicação simples conforme instruções da embalagem.
+                </div>
+                <div class="faq-item reveal">
+                    <strong>Em quanto tempo recebo?</strong><br>
+                    Prazo informado no checkout conforme sua região.
+                </div>
+            </div>
+        </div>
+    </section>
 
-<div class="grid">
-<div class="card">
-<h3>Mais Segurança</h3>
-<p>Volte a viver os momentos íntimos com tranquilidade.</p>
-</div>
+    <footer>
+        <div class="container">
+            <h2 style="color:#fff; -webkit-text-fill-color:#fff;">Sua confiança merece atenção.</h2>
+            <p style="margin:15px 0 25px; font-size:18px;">
+                Receba com discrição total.
+            </p>
+            <a href="#oferta" class="btn">QUERO RECEBER AGORA</a>
+            <small>
+                Produto cosmético. Resultados podem variar de pessoa para pessoa.
+            </small>
+        </div>
+    </footer>
 
-<div class="card">
-<h3>Aplicação Simples</h3>
-<p>Uso rápido e prático antes dos momentos importantes.</p>
-</div>
+    <script>
+        // ============ PARTÍCULAS FLUTUANTES NO HEADER ============
+        const particlesContainer = document.getElementById('particles');
+        for (let i = 0; i < 30; i++) {
+            const particle = document.createElement('div');
+            particle.classList.add('particle');
+            const size = Math.random() * 8 + 4;
+            particle.style.width = size + 'px';
+            particle.style.height = size + 'px';
+            particle.style.left = Math.random() * 100 + '%';
+            particle.style.animationDuration = (Math.random() * 10 + 8) + 's';
+            particle.style.animationDelay = Math.random() * 8 + 's';
+            particlesContainer.appendChild(particle);
+        }
 
-<div class="card">
-<h3>Uso Discreto</h3>
-<p>Sem chamar atenção. Sem constrangimento.</p>
-</div>
+        // ============ PARALLAX SUAVE NO SCROLL ============
+        window.addEventListener('scroll', () => {
+            const scrolled = window.pageYOffset;
+            const header = document.getElementById('header');
+            if (header && window.innerWidth > 900) {
+                header.style.backgroundPositionY = -(scrolled * 0.4) + 'px';
+            }
+        });
 
-<div class="card">
-<h3>Confiança Renovada</h3>
-<p>Sentir-se preparado muda tudo.</p>
-</div>
-</div>
+        // ============ EFEITO 3D NO PRODUTO (MOUSE) ============
+        const productBox = document.querySelector('.product-box');
+        const product3d = document.getElementById('product3d');
+        if (productBox && product3d && window.innerWidth > 900) {
+            productBox.addEventListener('mousemove', (e) => {
+                const rect = productBox.getBoundingClientRect();
+                const x = e.clientX - rect.left;
+                const y = e.clientY - rect.top;
+                const centerX = rect.width / 2;
+                const centerY = rect.height / 2;
+                const rotateX = ((y - centerY) / centerY) * -8;
+                const rotateY = ((x - centerX) / centerX) * 8;
+                product3d.style.transform = `rotateY(${rotateY}deg) rotateX(${rotateX}deg) scale(1.04)`;
+            });
+            productBox.addEventListener('mouseleave', () => {
+                product3d.style.transform = 'rotateY(0deg) rotateX(0deg) scale(1)';
+            });
+        }
 
-</div>
-</section>
+        // ============ RIPPLE EFFECT NOS BOTÕES ============
+        document.querySelectorAll('.btn').forEach(btn => {
+            btn.addEventListener('click', function(e) {
+                const ripple = document.createElement('span');
+                ripple.classList.add('ripple');
+                const rect = btn.getBoundingClientRect();
+                const size = Math.max(rect.width, rect.height);
+                ripple.style.width = ripple.style.height = size + 'px';
+                ripple.style.left = (e.clientX - rect.left - size / 2) + 'px';
+                ripple.style.top = (e.clientY - rect.top - size / 2) + 'px';
+                btn.appendChild(ripple);
+                ripple.addEventListener('animationend', () => {
+                    ripple.remove();
+                });
+            });
+        });
 
-<section class="gray">
-<div class="container">
+        // ============ SCROLL SUAVE PARA LINKS ÂNCORA ============
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                }
+            });
+        });
 
-<h2>Tecnologia cosmética masculina de nova geração</h2>
+        // ============ REVELAR ELEMENTOS AO SCROLL (Intersection Observer) ============
+        const revealElements = document.querySelectorAll('.reveal, .reveal-left, .reveal-right');
+        const observerOptions = {
+            threshold: 0.15,
+            rootMargin: '0px 0px -50px 0px'
+        };
 
-<p class="subtitle">
-Sua fórmula em gel foi desenvolvida para absorção tópica rápida,
-proporcionando praticidade e sensação de preparo antes dos momentos íntimos.
-</p>
+        const revealObserver = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('active');
+                    // Manter visível após revelar
+                    revealObserver.unobserve(entry.target);
+                }
+            });
+        }, observerOptions);
 
-<div class="grid">
-<div class="card">
-<h3>Textura Premium</h3>
-<p>Aplicação confortável e discreta.</p>
-</div>
+        revealElements.forEach(el => revealObserver.observe(el));
 
-<div class="card">
-<h3>Rotina Moderna</h3>
-<p>Sem depender de comprimidos.</p>
-</div>
+        // ============ HORIZONTAL SCROLL COM MOUSE WHEEL (opcional) ============
+        const horizontalWrapper = document.getElementById('horizontalScroll');
+        if (horizontalWrapper) {
+            horizontalWrapper.addEventListener('wheel', (e) => {
+                if (window.innerWidth > 768) {
+                    e.preventDefault();
+                    horizontalWrapper.scrollLeft += e.deltaY * 1.2;
+                }
+            }, { passive: false });
+        }
 
-<div class="card">
-<h3>Visual Elegante</h3>
-<p>Produto pensado para homens exigentes.</p>
-</div>
-</div>
-
-</div>
-</section>
-
-<section>
-<div class="container">
-
-<h2>Ninguém precisa saber.</h2>
-
-<p class="subtitle">
-A embalagem foi criada no formato de gel íntimo premium,
-discreta e sofisticada. Pode ficar no banheiro, nécessaire ou gaveta
-sem levantar questionamentos.
-</p>
-
-</div>
-</section>
-
-<section class="gray">
-<div class="container">
-
-<h2>Homens reais relatam mais confiança</h2>
-
-<div class="grid">
-
-<div class="card testimonial">
-“Gostei da discrição. Passei a me sentir mais seguro e tranquilo.”
-<br><br><strong>Marcelo, 42 anos</strong>
-</div>
-
-<div class="card testimonial">
-“Produto elegante, fácil de usar e me ajudou psicologicamente.”
-<br><br><strong>Eduardo, 51 anos</strong>
-</div>
-
-<div class="card testimonial">
-“Minha maior mudança foi voltar a confiar.”
-<br><br><strong>Rafael, 38 anos</strong>
-</div>
-
-</div>
-
-</div>
-</section>
-
-<section id="oferta">
-<div class="container">
-
-<h2>Escolha seu Kit</h2>
-
-<div class="offer-wrap">
-
-<div class="offer">
-<h3>1 Unidade</h3>
-<p>Ideal para experimentar</p>
-<div class="price">R$ 49,90</div>
-<a href="#" class="btn">COMPRAR AGORA</a>
-</div>
-
-<div class="offer">
-<div class="tag">MAIS VENDIDO</div>
-<h3>3 Unidades</h3>
-<p>Melhor custo-benefício</p>
-<div class="price">R$ 89,90</div>
-<a href="#" class="btn">QUERO O KIT COMPLETO</a>
-</div>
-
-</div>
-
-</div>
-</section>
-
-<section class="gray">
-<div class="container">
-
-<h2>Perguntas Frequentes</h2>
-
-<div class="faq">
-
-<div class="faq-item">
-<strong>Isso é comprimido?</strong><br>
-Não. Produto em gel de uso tópico.
-</div>
-
-<div class="faq-item">
-<strong>A embalagem é discreta?</strong><br>
-Sim. Sem descrição constrangedora.
-</div>
-
-<div class="faq-item">
-<strong>Como usar?</strong><br>
-Aplicação simples conforme instruções da embalagem.
-</div>
-
-<div class="faq-item">
-<strong>Em quanto tempo recebo?</strong><br>
-Prazo informado no checkout conforme sua região.
-</div>
-
-</div>
-
-</div>
-</section>
-
-<footer>
-<h2 style="color:#fff;">Sua confiança merece atenção.</h2>
-<p style="margin:15px 0 25px;">
-Receba com discrição total.
-</p>
-<a href="#oferta" class="btn">QUERO RECEBER AGORA</a>
-<br><br>
-<small>
-Produto cosmético. Resultados podem variar de pessoa para pessoa.
-</small>
-</footer>
-
+        // ============ TILT NOS CARDS COMUNS (MOUSE) ============
+        document.querySelectorAll('.card:not(.scroll-card)').forEach(card => {
+            card.addEventListener('mousemove', (e) => {
+                if (window.innerWidth <= 768) return;
+                const rect = card.getBoundingClientRect();
+                const x = e.clientX - rect.left;
+                const y = e.clientY - rect.top;
+                const centerX = rect.width / 2;
+                const centerY = rect.height / 2;
+                const rotateX = ((y - centerY) / centerY) * -5;
+                const rotateY = ((x - centerX) / centerX) * 5;
+                card.style.transform =
+                    `translateY(-10px) rotateX(${rotateX}deg) rotateY(${rotateY}deg)`;
+            });
+            card.addEventListener('mouseleave', () => {
+                card.style.transform = 'translateY(0) rotateX(0) rotateY(0)';
+            });
+        });
+    </script>
 </body>
 </html>
